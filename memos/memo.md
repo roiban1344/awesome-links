@@ -64,7 +64,7 @@ npx prisma db push
 ```
 でHeroku Postgres上に3つのテーブルが作成される。
 
-# シーディング
+## シーディング
 - Conventioalにはprisma/seed.tsにシード用ファイルを配置する。
 - `--preview-feature`オプションは現在は不要。
 - package.jsonのの`scripts`の`ts-node`プロパティは廃止されている。
@@ -123,3 +123,10 @@ https://pris.ly/d/seeding
 prisma:warn The "ts-node" script in the package.json is not used anymore since version 3.0 and can now be removed.
 Error: To configure seeding in your project you need to add a "prisma.seed" property in your package.json with the command to execute it:
 ```
+
+## データベース閲覧
+```
+$npx prisma studio
+```
+
+でデフォルトで http://localhost:5555 にPrisma Studioが開く。
