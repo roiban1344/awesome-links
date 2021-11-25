@@ -16,7 +16,8 @@ model User {
   updatedAt DateTime @updatedAt
   email     String?  @unique
   image     String?
-  roke      Role     @default(USER)
+  role      Role     @default(USER)
+  bookmarks Link[]
 }
 
 enum Role {
@@ -33,4 +34,5 @@ model Link {
   url         String
   imageUrl    String
   category    String
+  users       User[]
 }
