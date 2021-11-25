@@ -5,6 +5,16 @@
 
 - [How to set up a free PostgreSQL database on Heroku \- DEV Community 👩‍💻👨‍💻](https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1)
 
+## Prisma
+紹介ページ
+- [Prisma Client \- Auto\-generated query builder for your data](https://www.prisma.io/client)
+- [Prisma Migrate \| Hassle\-free Database Migrations](https://www.prisma.io/migrate)
+
+APIリファレンス
+- [Prisma schema \(Reference\) \| Prisma Docs](https://www.prisma.io/docs/concepts/components/prisma-schema)
+- [Prisma Client API \(Reference\) \| Prisma Docs](https://www.prisma.io/docs/reference/api-reference/prisma-client-reference)
+
+
 # 作業メモ
 `prisma`を
 ```
@@ -19,4 +29,13 @@ $ npx prisma init
 More information in our documentation:
 https://pris.ly/d/getting-started
 ```
-で`/prisma/schema.prisma`の雛形が生成される。
+で`/prisma/schema.prisma`の雛形と`.env`が生成される。
+
+`.env`ファイルにはHerokuに立てたデータベースのURLをコピー。
+
+Appの個別ページを開いて、 
+
+Resources &gt; Heroku Postgres &gt; Settings &gt; Database Credentials (View Credentials)&gt; URI
+
+から参照。
+
