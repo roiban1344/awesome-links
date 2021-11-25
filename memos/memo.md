@@ -39,3 +39,20 @@ Resources &gt; Heroku Postgres &gt; Settings &gt; Database Credentials (View Cre
 
 から参照。
 
+モデルに
+```
+model User{
+    //略
+    bookmarks Link[]
+}
+
+model Link{
+    //略
+    users User[]
+}
+```
+
+のように書くとmany-to-many(m-n) relation が暗黙的に定義され、対応するテーブルが用意される。
+
+[Relations \(Reference\) \| Prisma Docs](https://www.prisma.io/docs/concepts/components/prisma-schema/relations)
+
