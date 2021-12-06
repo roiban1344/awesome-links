@@ -130,3 +130,20 @@ $npx prisma studio
 ```
 
 でデフォルトで http://localhost:5555 にPrisma Studioが開く。
+
+# GraphQLサーバー作成
+Part.2
+
+[Fullstack app with TypeScript, Next\.js, Prisma & GraphQL \- GraphQL API](https://www.prisma.io/blog/fullstack-nextjs-graphql-prisma-2-fwpc6ds155)
+
+- `/graphql/schema.ts`: スキーマ定義。`Query`と`Link`
+- `/graphql/resolvers.ts`: リゾルバ定義。スキーマ定義と整合する必要あり。
+- `/pages/api/graphql.ts`: エンドポイント。`apolloServer`インスタンスの初期化、`.start()`で起動。
+- `/lib/prisma.ts`: PrismaClientのインスタンス初期化。
+- `/graphql/context.ts`: コンテキスト定義。リゾルバのPrismaClientへのアクセスを可能にする。
+
+`npm run dev`で
+
+http://localhost:3000/api/graphql
+
+にApollo Serverが立つ。
